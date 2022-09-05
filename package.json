@@ -1,0 +1,29 @@
+{
+  "name": "appsecdemo-js",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnNKing/appsecdemo-js.git"
+  },
+  "author": "John N. King",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohnNKing/appsecdemo-js/issues"
+  },
+  "homepage": "https://github.com/JohnNKing/appsecdemo-js#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.1"
+  }
+}

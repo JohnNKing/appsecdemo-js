@@ -1,0 +1,18 @@
+body {
+	padding-top: 70px;
+}
+
+h4 {
+    font-size: 18px;
+    margin-top: 32px;
+}
+
+form {
+    margin-bottom: 1em;
+}
+
+.label {
+	float: right;
+    line-height: 21px;
+    padding-right: 21px;
+}
