@@ -16,3 +16,8 @@ form {
     line-height: 21px;
     padding-right: 21px;
 }
+
+.label a {
+    color: white;
+    text-decoration: none;
+}
