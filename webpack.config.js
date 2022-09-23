@@ -12,12 +12,17 @@ module.exports = {
     assetModuleFilename: '[name][ext]',
   },
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
+    watchFiles: [path.join(__dirname, 'src', '*.html')],
+    hot: true,
     compress: true,
     allowedHosts: 'auto',
     open: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8080',
+        router: () => 'http://localhost:8081',
+      }
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -30,11 +35,7 @@ module.exports = {
       {
         test: /\.(css)$/i,
         use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(png|svg|woff|woff2|eot|ttf)$/i,
-        type: 'asset/resource'
-      },
+      }
     ]
   }
 };
