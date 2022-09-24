@@ -11,8 +11,17 @@ app.get('/', (req, res) => {
 });
 
 app.put('/api/comment', (req, res) => {
-  res.send('comment added: ' + req.body.comment);
-  res.status(200);
+
+  // Validation
+  if (req.body?.comment === undefined) {
+    res.status(500);
+    res.statusMessage({message: 'Error: comment field may not be undefined'});
+  } else {
+    res.status(200);
+    res.send({message: 'Comment added: ' + JSON.stringify(req.body.comment)});
+  }
+
+  res.end();
 });
 
 app.listen(port, () => {
